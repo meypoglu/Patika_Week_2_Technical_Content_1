@@ -6,6 +6,11 @@ public class Practice_1_Palindrome_Numbers {
         Scanner input = new Scanner(System.in);
         System.out.print("Bir sayı giriniz: ");
         int num = input.nextInt();
+        // Metodun çağrılması
+        System.out.println(isPalindrom(num));
+
+    }
+    static String isPalindrom(int num) {
         // Her basamaktaki sayıları sırayla tutan değişken
         int digit = 0;
         // Terse çevrilmiş haldeki sayıyı tutacak değişken
@@ -25,7 +30,6 @@ public class Practice_1_Palindrome_Numbers {
             pow10 = pow10 / 10;
         }
         // Eğer verilen sayıyla reverseNum eşit ise palindrom sayı olarak çıktı verilir
-        System.out.println(reverseNum == num ? num + " bir palindrom sayı." : num + " bir palindrom sayı değil.");
-
+        return (reverseNum == num ? num + " bir palindrom sayı." : num + " bir palindrom sayı değil.");
     }
 }
